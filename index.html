@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Tic-Tac-Toe</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div class="badge">AI POWERED GAME</div>
+
+            <h1>AI Tic-Tac-Toe</h1>
+
+            <p>
+                Challenge an intelligent AI opponent powered by
+                the <strong>Min-Max Algorithm</strong>
+            </p>
+        </header>
+
+
+        <!-- Score Board -->
+        <section class="scoreboard">
+
+            <div class="score-card player">
+                <span class="icon">👤</span>
+                <h3>YOU</h3>
+                <div id="playerScore">0</div>
+                <small>Player X</small>
+            </div>
+
+            <div class="score-card draw">
+                <span class="icon">⚡</span>
+                <h3>DRAWS</h3>
+                <div id="drawScore">0</div>
+                <small>Equal Match</small>
+            </div>
+
+            <div class="score-card ai">
+                <span class="icon">🤖</span>
+                <h3>AI</h3>
+                <div id="aiScore">0</div>
+                <small>AI O</small>
+            </div>
+
+        </section>
+
+
+        <!-- Game Area -->
+        <main class="game-area">
+
+            <!-- Game Status -->
+            <div class="status-box">
+                <span id="statusIcon">🎮</span>
+
+                <div>
+                    <h2 id="gameStatus">Your Turn</h2>
+                    <p id="statusMessage">
+                        Choose an empty cell to make your move
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Game Board -->
+            <div class="board" id="board">
+
+                <button class="cell" data-index="0"></button>
+                <button class="cell" data-index="1"></button>
+                <button class="cell" data-index="2"></button>
+
+                <button class="cell" data-index="3"></button>
+                <button class="cell" data-index="4"></button>
+                <button class="cell" data-index="5"></button>
+
+                <button class="cell" data-index="6"></button>
+                <button class="cell" data-index="7"></button>
+                <button class="cell" data-index="8"></button>
+
+            </div>
+
+
+            <!-- Controls -->
+            <div class="controls">
+
+                <button id="newGameBtn" class="primary-btn">
+                    🔄 New Game
+                </button>
+
+                <button id="resetScoreBtn" class="secondary-btn">
+                    🗑️ Reset Score
+                </button>
+
+            </div>
+
+
+            <!-- AI Information -->
+            <section class="ai-panel">
+
+                <div class="ai-header">
+                    <span>🧠</span>
+
+                    <div>
+                        <h2>AI Decision Engine</h2>
+                        <p>Min-Max Algorithm</p>
+                    </div>
+
+                    <span id="aiIndicator" class="indicator"></span>
+                </div>
+
+
+                <div class="ai-stats">
+
+                    <div>
+                        <span>Algorithm</span>
+                        <strong>MIN-MAX</strong>
+                    </div>
+
+                    <div>
+                        <span>AI Symbol</span>
+                        <strong>O</strong>
+                    </div>
+
+                    <div>
+                        <span>Player Symbol</span>
+                        <strong>X</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="thinking-box">
+
+                    <div class="thinking-title">
+                        <span>AI Analysis</span>
+                        <span id="thinkingStatus">Waiting...</span>
+                    </div>
+
+                    <div class="progress">
+                        <div id="thinkingProgress"></div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                AI Tic-Tac-Toe • Min-Max Artificial Intelligence
+            </p>
+
+            <span>
+                Prototype Project
+            </span>
+        </footer>
+
+    </div>
+
+
+    <!-- JavaScript Files -->
+    <script src="ai.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
